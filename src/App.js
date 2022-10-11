@@ -1,18 +1,14 @@
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as BrowserRouter, Routes, Route} from 'react-router-dom';
 import { React } from 'react';
-import Home from "./components/Home"
+import Home from './containers/Home';
 
 const App = () => {
-
   return (
-    <div>
-      <Router>
-      <Home/>
-        <Routes>
-            <Route exact path='/'/>
-          </Routes>
-      </Router>
-      </div>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
