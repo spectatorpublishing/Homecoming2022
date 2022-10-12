@@ -68,27 +68,20 @@ const CarouselItem = ({im_url, title}) => {
         </div>
     )
 }
-const Carousel = (props) => {
-    // const {children} = props;
-    // var article_titles = [];
-    // var article_imgs = [];
-    // for (var i = 0; i < section.length; i++) {
-    //     article_titles.push(section[i].article_title);
-    //     article_imgs.push(section[i].image_url);
+const Carousel = ({section}) => {
 
-    // }
+    var article_array = []
+    for (var i = 0; i < section.length; i++) {
+        article_array.push((<CarouselItem im_url = {section[i].image_url} title = {section[i].article_title}/>   ));
+
+    }
+
+    console.log(article_array);
     return (
 
 
         <CarouselChild show = {3}>
-        <CarouselItem im_url = "https://via.placeholder.com/1600x300" title = "Title"/>     
-        <CarouselItem im_url = "https://via.placeholder.com/1600x300" title = "Title"/>     
-
-        <CarouselItem im_url = "https://via.placeholder.com/1600x300" title = "Title"/>     
-
-        <CarouselItem im_url = "https://via.placeholder.com/1600x300" title = "Title"/>     
-
-        <CarouselItem im_url = "https://via.placeholder.com/1600x300" title = "Title"/>     
+            {article_array}
 
         
 

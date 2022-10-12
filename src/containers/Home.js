@@ -18,7 +18,7 @@ const Home = () => {
       <Letter/>
 
 
-      <Carousel/>
+      <Carousel section = {uni_news_articles}/>
 
       <Credits/>
 
