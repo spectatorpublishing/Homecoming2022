@@ -73,13 +73,22 @@ const Carousel = (props) => {
 
 
         <CarouselChild show = {3}>
-
-                <img src="https://via.placeholder.com/1600x300" alt="placeholder" />
-                <img src="https://via.placeholder.com/1600x300" alt="placeholder" />
-                <img src="https://via.placeholder.com/1600x300" alt="placeholder" />          
-                <img src="https://via.placeholder.com/1600x300" alt="placeholder" />
-                <img src="https://via.placeholder.com/1600x300" alt="placeholder" />
-                <img src="https://via.placeholder.com/1600x300" alt="placeholder" />                      
+            <div class="container">
+                <img class = "caro_img" src="https://via.placeholder.com/1600x300" alt="placeholder" />
+                <div class="centered">Centered</div>
+            </div>
+            <div class="container">
+                <img class = "caro_img" src="https://via.placeholder.com/1600x300" alt="placeholder" />
+                <div class="centered">Centered</div>
+            </div>
+            <div class="container">
+                <img class = "caro_img" src="https://via.placeholder.com/1600x300" alt="placeholder" />
+                <div class="centered">Centered</div>
+            </div>
+            <div class="container">
+                <img class = "caro_img" src="https://via.placeholder.com/1600x300" alt="placeholder" />
+                <div class="centered">Centered</div>
+            </div>                   
         </CarouselChild>
 
     );

@@ -79,3 +79,37 @@
 .carousel-content.show-4 > * {
     width: calc(100% / 4);
 }
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  /* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+}
+
+.container:hover .centered{
+    color: white;
+}
+
+.container:hover .caro_img{
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+
+.caro_img {
+    -webkit-filter: brightness(100%);
+}
+
