@@ -60,6 +60,14 @@ const CarouselChild = (props) => {
     )
 };
 
+const CarouselItem = ({im_url, title}) => {
+    return (
+        <div class="container">
+            <img class = "caro_img" src={im_url} alt="placeholder" />
+            <div class="centered">{title}</div>
+        </div>
+    )
+}
 const Carousel = (props) => {
     // const {children} = props;
     // var article_titles = [];
@@ -73,22 +81,17 @@ const Carousel = (props) => {
 
 
         <CarouselChild show = {3}>
-            <div class="container">
-                <img class = "caro_img" src="https://via.placeholder.com/1600x300" alt="placeholder" />
-                <div class="centered">Centered</div>
-            </div>
-            <div class="container">
-                <img class = "caro_img" src="https://via.placeholder.com/1600x300" alt="placeholder" />
-                <div class="centered">Centered</div>
-            </div>
-            <div class="container">
-                <img class = "caro_img" src="https://via.placeholder.com/1600x300" alt="placeholder" />
-                <div class="centered">Centered</div>
-            </div>
-            <div class="container">
-                <img class = "caro_img" src="https://via.placeholder.com/1600x300" alt="placeholder" />
-                <div class="centered">Centered</div>
-            </div>                   
+        <CarouselItem im_url = "https://via.placeholder.com/1600x300" title = "Title"/>     
+        <CarouselItem im_url = "https://via.placeholder.com/1600x300" title = "Title"/>     
+
+        <CarouselItem im_url = "https://via.placeholder.com/1600x300" title = "Title"/>     
+
+        <CarouselItem im_url = "https://via.placeholder.com/1600x300" title = "Title"/>     
+
+        <CarouselItem im_url = "https://via.placeholder.com/1600x300" title = "Title"/>     
+
+        
+
         </CarouselChild>
 
     );
