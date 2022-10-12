@@ -5,6 +5,7 @@ import Carousel from '../components/Carousel';
 import NavBar from '../components/NavBar';
 import styled from 'styled-components';
 import MobileNavBar from '../components/MobileNavBar';
+import {uni_news_articles} from '../data/articles';
 const HomeContainer = styled.div`
     @media only screen and (max-width: 768px){
     }
@@ -15,7 +16,12 @@ const Home = () => {
     <HomeContainer>
       {window.innerWidth <= 768 ? <MobileNavBar/> : <NavBar/>}
       <Letter/>
+
+
+      <Carousel/>
+
       <Credits/>
+
     </HomeContainer>
   );
 }
