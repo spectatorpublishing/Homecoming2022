@@ -1,3 +1,4 @@
+
 .carousel-container {
     width: 100%;
     display: flex;
@@ -47,15 +48,17 @@
 }
 
 .left-arrow, .right-arrow {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
-    border-radius: 24px;
-    background-color: white;
-    border: 1px solid #ddd;
+
+
+    user-select: none; 
+    transform: scaleY(250%);
+    color: #0046A6;
+    font-size: 30px;
+    background:none;
+    border:none;
+    margin:0;
+    padding:10px;
+    cursor: pointer;
 }
 
 .left-arrow {
@@ -87,12 +90,17 @@
   }
 
   /* Centered text */
-.centered {
-    position: absolute;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:ital,wght@0,100;1,100&display=swap');
+.centered{
+  position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: transparent;
+    font-family: 'Roboto';
+    font-size: 30px;
+    width: 354px;
+
 }
 
 .container:hover .centered{
@@ -106,10 +114,19 @@
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
+    width:354px;
 }
 
 
 .caro_img {
     -webkit-filter: brightness(100%);
+    width:354px;
+    height: 258px;
+    object-fit:cover;
+
 }
 
+.carousel-container {
+    width:95%;
+    align-self: center;    
+}

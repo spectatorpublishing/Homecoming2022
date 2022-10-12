@@ -34,7 +34,7 @@ const CarouselChild = (props) => {
                 {
                     currentIndex > 0 &&
                     <button onClick={prev} className="left-arrow">
-                        &lt;
+                    &#x2039;
                     </button>
                 }
                 <div
@@ -52,7 +52,7 @@ const CarouselChild = (props) => {
                 {
                     currentIndex < (length - show) &&
                     <button onClick={next} className="right-arrow">
-                        &gt;
+                        &#x203A;
                     </button>
                 }
             </div>
@@ -60,33 +60,35 @@ const CarouselChild = (props) => {
     )
 };
 
-const CarouselItem = ({im_url, title}) => {
+const CarouselItem = ({im_url, title, link}) => {
     return (
+        <a href= {link}> 
         <div class="container">
-            <img class = "caro_img" src={im_url} alt="placeholder" />
+           <img class = "caro_img" src={im_url} alt="placeholder" /> 
             <div class="centered">{title}</div>
         </div>
+        </a>
     )
 }
 const Carousel = ({section}) => {
 
     var article_array = []
     for (var i = 0; i < section.length; i++) {
-        article_array.push((<CarouselItem im_url = {section[i].image_url} title = {section[i].article_title}/>   ));
+        article_array.push((<CarouselItem im_url = {section[i].image_url} title = {section[i].article_title} link = {section[i].article_link}/>   ));
 
     }
 
     console.log(article_array);
     return (
 
+        <div class = "carousel-container">
+            <CarouselChild show = {3}>
+                {article_array}
 
-        <CarouselChild show = {3}>
-            {article_array}
+            
 
-        
-
-        </CarouselChild>
-
+            </CarouselChild>
+        </div>
     );
 
     
