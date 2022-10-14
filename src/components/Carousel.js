@@ -7,15 +7,15 @@ import './carousel.css' ;
 
 const CarouselChild = (props) => {
     const {children, show} = props;
-// ...
+
     const [currentIndex, setCurrentIndex] = useState(0)
     const [length, setLength] = useState(children.length)
 
-    // Set the length to match current children from props
+
     useEffect(() => {
         setLength(children.length)
     }, [children])
-    // ...
+
     const next = () => {
         if (currentIndex < (length - 1)) {
             setCurrentIndex(prevState => prevState + 1)
@@ -30,7 +30,6 @@ const CarouselChild = (props) => {
     return (
         <div className="carousel-container">
             <div className="carousel-wrapper">
-                {/* You can alwas change the content of the button to other things */}
                 {
                     currentIndex > 0 &&
                     <button onClick={prev} className="left-arrow">
@@ -39,7 +38,6 @@ const CarouselChild = (props) => {
                 }
                 <div
                     className="carousel-content-wrapper"
-
                 >
                     <div
                         className={`carousel-content show-${show}`}
@@ -48,7 +46,6 @@ const CarouselChild = (props) => {
                         {children}
                     </div>
                 </div>
-                {/* You can alwas change the content of the button to other things */}
                 {
                     currentIndex < (length - show) &&
                     <button onClick={next} className="right-arrow">
@@ -71,27 +68,34 @@ const CarouselItem = ({im_url, title, link}) => {
     )
 }
 const Carousel = ({section}) => {
-
     var article_array = []
     for (var i = 0; i < section.length; i++) {
         article_array.push((<CarouselItem im_url = {section[i].image_url} title = {section[i].article_title} link = {section[i].article_link}/>   ));
-
     }
-
-    console.log(article_array);
-    return (
-
-        <div class = "carousel-container">
-            <CarouselChild show = {3}>
-                {article_array}
-
-            
-
-            </CarouselChild>
-        </div>
-    );
-
+    let w = window.innerWidth;
+    if (w>768) { // show 3 photos if browser sized, show 2 if mobile
+        return (
+            <div class = "carousel-container">
+                <CarouselChild show = {3}>
+                    {article_array}
     
+                
+    
+                </CarouselChild>
+            </div>
+        );
+    } else {
+        return (
+            <div class = "carousel-container">
+                <CarouselChild show = {2}>
+                    {article_array}
+    
+                
+    
+                </CarouselChild>
+            </div>
+        );
+    }    
 };
 
 export default Carousel;

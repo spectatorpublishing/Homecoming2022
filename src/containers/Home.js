@@ -14,7 +14,7 @@ const HomeContainer = styled.div`
 const Home = () => {
   return (
     <HomeContainer>
-      {window.innerWidth <= 768 ? <MobileNavBar/> : <NavBar/>}
+      {/* {window.innerWidth <= 768 ? <MobileNavBar/> : <NavBar/>} */}
       <Letter/>
 
 
