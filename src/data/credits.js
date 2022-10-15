@@ -13,8 +13,6 @@ export const credits = {
                 "staff_name": "Derek Ng",
                 "title": "SSFP Director"
             },
-            {"staff_name": "",
-            "title": ""},
             {
                 "staff_name": "Faith Andrews",
                 "title": "SSFP Board"
