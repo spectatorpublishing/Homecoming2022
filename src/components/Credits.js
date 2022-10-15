@@ -21,6 +21,15 @@ const Header = styled.h1`
     width: 60rem;
     font-size: 2.75rem;
     font-family: 'IBM Plex Serif', serif;
+
+    @media only screen and (${device.tablet}){
+        font-size: 2.2rem;
+    }
+
+    @media only screen and (${device.mobile}){
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
 `;
 
 const SectAndNames = styled.div`
@@ -31,6 +40,14 @@ const SectAndNames = styled.div`
     width: 100%;
     height: 210rem;
     margin-top: 6rem;
+
+    @media only screen and (${device.tablet}){
+        display: block;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: none;
+        height: fit-content;
+    }
 `;
 
 const Section = styled.div`
@@ -40,8 +57,15 @@ const Section = styled.div`
     height: fit-content;
     margin-bottom: 2rem;
     font-family: 'IBM Plex Serif', serif;
+
+    @media only screen and (${device.laptopS}){
+        font-size: 1.5rem;
+    }
+
     @media only screen and (${device.tablet}){
-        background-color: blue;
+        font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
     }
 `;
 
@@ -51,6 +75,14 @@ const Name = styled.div`
     font-weight: 400;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
+
+    @media only screen and (${device.laptopS}){
+        font-size: 1.5rem;
+    }
+
+    @media only screen and (${device.tablet}){
+        font-size: 1rem;
+    }
 `;
 
 const Credits = ({ }) => {
