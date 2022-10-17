@@ -1,11 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { device } from '../device';
-import theme from '../theme';
 import { credits } from '../data/credits'
 
 const Container = styled.div`
-    height: 100%;
     width: 100%;
     background-color: #D2E1EE;
     color: #0046A6;
@@ -18,17 +15,23 @@ const HeaderDiv = styled.div`
 
 const Header = styled.h1`
     text-align: center;
-    width: 60rem;
-    font-size: 2.75rem;
+    width: 70%;
+    font-size: 2.5rem;
     font-family: 'IBM Plex Serif', serif;
+    padding-top:2rem;
 
-    @media only screen and (${device.tablet}){
-        font-size: 2.2rem;
+    @media only screen and (max-width: 1216px){
+        font-size: 2.1rem;
     }
 
-    @media only screen and (${device.mobile}){
-        font-weight: 300;
-        font-size: 1.5rem;
+    @media only screen and (max-width: 768px){
+        width: 80%;
+        font-size: 2rem;
+    }
+
+    @media only screen and (max-width: 600px){
+        font-weight: 400;
+        font-size: 1.3rem;
     }
 `;
 
@@ -36,34 +39,52 @@ const SectAndNames = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: space-evenly;
+    align-content:space-around;
     width: 100%;
-    height: 210rem;
-    margin-top: 6rem;
+    height: 120rem;
+    margin-top: 2rem;
 
-    @media only screen and (${device.tablet}){
+    @media only screen and (max-width: 1216px){
+        height: 130rem;
+    }
+
+    @media only screen and (max-width: 768px){
         display: block;
         flex-direction: column;
         flex-wrap: nowrap;
         align-content: none;
         height: fit-content;
-    }
+        margin-top:2rem;
+    }  
 `;
 
 const Section = styled.div`
-    font-size: 2.75rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    width: 25.938rem;
+    width: 22rem;
     height: fit-content;
     margin-bottom: 2rem;
+    padding:0;
+    margin:0;
     font-family: 'IBM Plex Serif', serif;
 
-    @media only screen and (${device.laptopS}){
-        font-size: 1.5rem;
+    @media only screen and (max-width: 1216px){
+        font-size: 1.6rem;
+        width: 16rem;
     }
 
-    @media only screen and (${device.tablet}){
+    @media only screen and (max-width: 1024px){
+        font-size: 1.4rem;
+        width: 14rem;
+    }
+
+    @media only screen and (max-width: 768px){
         font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+    @media only screen and (max-width: 600px){
+        font-size: 1.2rem;
         text-align: center;
         width: 100%;
     }
@@ -71,17 +92,16 @@ const Section = styled.div`
 
 const Name = styled.div`
     font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
+    font-size: 1.15rem;
     font-weight: 400;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
 
-    @media only screen and (${device.laptopS}){
-        font-size: 1.5rem;
-    }
-
-    @media only screen and (${device.tablet}){
+    @media only screen and (max-width: 1216px){
         font-size: 1rem;
+    }
+    @media only screen and (max-width: 1024px){
+        font-size: 0.75rem;
     }
 `;
 
@@ -93,11 +113,13 @@ const Credits = ({ }) => {
                 {Object.entries(credits).map(([section, key]) => {
                     return(
                         <Section> {section} 
+                        <br/>
                         {key.map((person, index) => {
                             return(
                                 <Name key={index}>{person.staff_name}, {person.title}</Name>
                             );
                         })}
+                        <br/>
                         </Section>
                     );
                 })}
