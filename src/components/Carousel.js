@@ -67,7 +67,7 @@ const CarouselItem = ({im_url, title, link}) => {
         </a>
     )
 }
-const Carousel = ({section}) => {
+const Carousel = ({section, section_title}) => {
     var article_array = []
     for (var i = 0; i < section.length; i++) {
         article_array.push((<CarouselItem im_url = {section[i].image_url} title = {section[i].article_title} link = {section[i].article_link}/>   ));
@@ -76,9 +76,10 @@ const Carousel = ({section}) => {
     if (w>768) { // show 3 photos if browser sized, show 2 if mobile
         return (
             <div class = "carousel-container">
+            <p class = "section_title">{section_title}</p>
                 <CarouselChild show = {3}>
                     {article_array}
-    
+            
                 
     
                 </CarouselChild>
@@ -87,6 +88,7 @@ const Carousel = ({section}) => {
     } else {
         return (
             <div class = "carousel-container">
+                <p class = "section_title">{section_title}</p>
                 <CarouselChild show = {2}>
                     {article_array}
     

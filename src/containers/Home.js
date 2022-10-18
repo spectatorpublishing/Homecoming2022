@@ -18,7 +18,7 @@ const Home = () => {
       <Letter/>
 
 
-      <Carousel section = {uni_news_articles}/>
+      <Carousel section = {uni_news_articles} section_title = "Sports"/>
 
       <Credits/>
 

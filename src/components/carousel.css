@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,500;1,100&family=Poppins:wght@600&family=Roboto:ital,wght@0,100;1,100&display=swap');
+.section_title {
+    font-size: 24px;
+    color:  #0046A6;
+    padding-left: 22px;
+    font-family: "IBM Plex Serif";
+    user-select: none; 
+}
 .carousel-container {
     width: 100%;
     display: flex;
@@ -107,6 +115,11 @@
 }
 
 @media only screen and (min-width: 768px) {
+    .section_title {
+        font-size: 64px;
+        padding-left: 55px;
+
+    }
     .centered{
         font-size: 30px;
 
