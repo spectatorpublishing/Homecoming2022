@@ -6,18 +6,18 @@ export const sections = [
     },
     {
         title: "Sports",
-        url: "/sports",
+        url: "#sports",
     },
     {
         title: "A&E",
-        url: "/a&e",
+        url: "#a&e",
     },
     {
         title: "Opinion",
-        url: "/opinion",
+        url: "#opinion",
     },
     {
         title:"Acknowledgements",
-        url:"/acknowledgements"
+        url:"#acknowledgements"
     }
 ];

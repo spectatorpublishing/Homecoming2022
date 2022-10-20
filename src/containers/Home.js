@@ -15,7 +15,7 @@ const Home = () => {
     <HomeContainer>
       {window.innerWidth <= 768 ? <MobileNavBar/> : <NavBar/>}
       <Letter/>
-      <Credits/>
+      <Credits id="acknowledgements"/>
     </HomeContainer>
   );
 }
