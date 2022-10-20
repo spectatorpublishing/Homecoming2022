@@ -20,8 +20,13 @@ const Container = styled.div`
     }
 `;
 
-const Lion = styled.div`
-    content: ${theme.lion.roarie};
+const Lion = styled.span`
+    font-size:2rem;
+    float:right;
+    display: none;
+    :hover {
+        display: block;
+    }
 `
 
 const MenuItem = styled.div`
@@ -34,7 +39,6 @@ const MenuItem = styled.div`
     color:${theme.colors.lightBlue};
     text-align:left;
     text-decoration:none;
-    transition-duration:0.5s;
     a {
         text-decoration: none;
         color: ${theme.colors.blueText};
@@ -54,8 +58,7 @@ const NavBar = ({ }) => {
         <Container>
             {sections.map(section => (
                 <MenuItem>
-                    <Link to={section.url}>{section.title}</Link>
-                    <Lion></Lion>
+                    <Link to={section.url}>{section.title} <Lion>&#129409;</Lion></Link>
                 </MenuItem>
             ))}
         </Container>

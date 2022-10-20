@@ -69,6 +69,13 @@ const MobileNavBar = ({ current }) => {
 
     return (
         <NavWrap>
+            <Logo>
+                <a href="https://www.columbiaspectator.com/" style={{
+                }}><img style={{
+                    height: "40px",
+                    width: "40px",
+                }} src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LC75RL476NFG3P677LOBAW2MXE.png"></img></a>
+            </Logo>
             <HamburgerWrapper>
                 <HamburgerMenu
                     isOpen={open}

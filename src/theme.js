@@ -15,7 +15,7 @@ const theme = {
       largeDesktop: "1440px"
     },
     lion: {
-      roarie: "U+1F981",
+      roarie: "&#129409",
     }
   };
   
