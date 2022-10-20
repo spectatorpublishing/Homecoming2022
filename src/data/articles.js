@@ -9,7 +9,7 @@ export const opinion_articles = [
     "article_link": "https://www.columbiaspectator.com/opinion/2022/10/18/what-are-universities-for-on-the-so-called-fourth-purpose/",
     "article_title": "What are universities for? On the so-called ‘Fourth Purpose’",
     "article_authors": "Dhananjay Jagannathan",
-    "article_authors": "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/47E6T3YWCZD2VIF4IJSRH6AM2A.png"
+    "image_url": "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/47E6T3YWCZD2VIF4IJSRH6AM2A.png"
   },
   {
     "article_link": "https://www.columbiaspectator.com/opinion/2022/10/18/student-athletes-belong-at-columbia/",

@@ -49,7 +49,7 @@ const MenuItem = styled.div`
     }
 `;
 
-const NavBar = ({ }) => {
+const NavBar = () => {
     return (
         <Container>
             {sections.map(section => (

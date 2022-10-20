@@ -108,7 +108,7 @@ const Name = styled.div`
     }
 `;
 
-const Credits = ({ }) => {
+const Credits = () => {
     return (
         <Container>
             <HeaderDiv><Header>THE COLUMBIA DAILY SPECTATOR STAFF WHO MADE THIS ISSUE POSSIBLE</Header></HeaderDiv>
