@@ -11,7 +11,9 @@ const CarouselChild = (props) => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [length, setLength] = useState(children.length)
 
-
+    window.addEventListener('resize', function () { 
+        window.location.reload(); 
+    });
     useEffect(() => {
         setLength(children.length)
     }, [children])
@@ -73,7 +75,7 @@ const Carousel = ({section, section_title}) => {
         article_array.push((<CarouselItem im_url = {section[i].image_url} title = {section[i].article_title} link = {section[i].article_link}/>   ));
     }
     let w = window.innerWidth;
-    if (w>768) { // show 3 photos if browser sized, show 2 if mobile
+    if (w>1800) { // show 3 photos if browser sized, show 2 if mobile
         return (
             <div class = "carousel-container">
             <p class = "section_title">{section_title}</p>
