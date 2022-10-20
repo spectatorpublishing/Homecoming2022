@@ -5,35 +5,35 @@ export const sections = [
         exact: true,
     },
     {
-        title: "University News",
-        url: "/uni-news",
-    },
-    {
-        title: "City News",
-        url: "/city-news",
-    },
-    {
-        title: "A&E",
-        url: "/a&e",
-    },
-    {
         title: "Sports",
-        url: "/sports",
+        url: "#sports",
     },
     {
         title: "Opinion",
-        url: "/opinion",
+        url: "#opinion",
     },
     {
-        title: "The Eye",
-        url: "/eye",
+        title: "A&E",
+        url: "#a&e",
     },
     {
-        title: "Illustrations",
-        url: "/illo",
+        title: "City News",
+        url: "#city-news",
+    },
+    {
+        title: "University News",
+        url: "#university-news",
+    },
+    {
+        title: "Spectrum",
+        url: "#spectrum",
+    },
+    {
+        title: "Audio",
+        url: "#audio",
     },
     {
         title:"Acknowledgements",
-        url:"/acknowledgements"
+        url:"#acknowledgements"
     }
 ];
