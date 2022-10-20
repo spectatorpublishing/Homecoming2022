@@ -4,7 +4,7 @@ import { device } from '../device';
 import theme from '../theme';
 import { articles } from '../data/articles'
 
-const Carousel = ({ }) => {
+const Carousel = () => {
     return (
         <div> </div>
     )
