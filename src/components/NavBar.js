@@ -49,13 +49,6 @@ const NavText = styled.div`
     text-transform: uppercase;
 `;
 
-
-const Logo = styled.div`
-    display:block;
-    float:right;
-    margin:1rem;
-`;
-
 const Lion = styled.span`
     position:absolute;
     font-size:2.2rem;
@@ -66,13 +59,6 @@ const NavBar = () => {
     const [current, setCurrent] = useState("/");
     return (
         <Nav>
-        <Logo>
-                <a href="https://www.columbiaspectator.com/" style={{
-                }}><img style={{
-                    height: "auto",
-                    width: "20rem",
-                }} src="https://spec-imagehosting.s3.amazonaws.com/CDSwhitemasthead.png"></img></a>
-            </Logo>
         <VertNav>
             {sections.map((section, index) => (
                 <Tab current = {current == section.url} onClick = {()=>setCurrent(section.url)} key={index}>

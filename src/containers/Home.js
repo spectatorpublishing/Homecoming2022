@@ -17,7 +17,7 @@ const HomeContainer = styled.div`
 
 //image in header
 const HeaderImage = styled.div`
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://cloudfront-us-east-1.images.arcpublishing.com/spectator/FEM5FWOA4RCNFG27LLTUCM2PVM.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("https://cloudfront-us-east-1.images.arcpublishing.com/spectator/FEM5FWOA4RCNFG27LLTUCM2PVM.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -25,7 +25,7 @@ const HeaderImage = styled.div`
     width: 100%;
     height: 100%;
     z-index:0;
-    height:90vh;
+    height:100vh;
     display: flex;
     justify-content: flex-end;
     @media only screen and (max-width: 768px){
@@ -43,10 +43,11 @@ const Headline = styled.div`
     color: white;
     font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
     font-weight: bold;
-    font-size: 6rem;
+    font-size: 5rem;
     padding-left:0.5rem;
     left: 2.5%;
     top: 80%;
+    text-shadow: 1px 1px 10px #00214f;
     @media only screen and (max-width: 768px){
         display:none;
         font-size: 1.2rem;
@@ -54,6 +55,11 @@ const Headline = styled.div`
         left: 1.8rem;
     }
 `;
+const Logo = styled.img`
+  display:relative;
+  width:20rem;
+`;
+
 const Empty = styled.div``;
 const Home = () => {
   return (
