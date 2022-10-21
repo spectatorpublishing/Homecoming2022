@@ -30,8 +30,7 @@ const HeaderImage = styled.div`
     display: flex;
     justify-content: flex-end;
     @media only screen and (max-width: 768px){
-      margin-top:1vw;
-      height:120vh;
+      height:80vh;
       background-image: url("https://cloudfront-us-east-1.images.arcpublishing.com/spectator/XSROV7CJTFCW7LHD4WP5S6WFI4.jpg");
     }
 `;
@@ -56,7 +55,7 @@ const Headline = styled.div`
         left: 1.8rem;
     }
     @media only screen and (max-width: 1024px){
-        font-size:3.8rem;
+        font-size:3.6rem;
     }
 `;
 const Logo = styled.img`

@@ -19,7 +19,7 @@ const NavWrap = styled.div`
     left:0;
     flex-wrap: wrap;
     z-index:100;
-    background-color:#0046A6;
+    background-color:rgba(0, 70, 166, 1);
     a {
         padding: 0.5rem 0rem;
     }
@@ -29,14 +29,15 @@ const NavWrap = styled.div`
 `;
 
 const Tab = styled.div`
-    background-color:${props => props.current ? "#D2E1EE" : "inherit"};
-    color:${props => props.current ? "#1F3B83" : "white"};
-    padding: 0.75rem;
+    background-color:${props => props.current ? "rgba(210, 225, 238, 1)" : "#0046A6"};
+    color:${props => props.current ? "rgba(0, 70, 166, 1)" : "white"};
+    padding: 0.55rem;
 `;
 const Logo = styled.div`
     z-index:100;
     position:relative;
     left:5%;
+    bottom:0.6rem;
 `;
 const MobileNavBar = () => {
     const [open, setOpen] = React.useState(false);
@@ -53,12 +54,12 @@ const MobileNavBar = () => {
     return (
         <NavWrap>
             <Logo>
-                {/* <a href="https://www.columbiaspectator.com/" style={{
+                <a href="https://www.columbiaspectator.com/" style={{
                 }}><img style={{
                     position: "absolute",
                     height: "auto",
                     width: "15rem",
-                }} src="https://spec-imagehosting.s3.amazonaws.com/CDSwhitemasthead.png"></img></a> */}
+                }} src="https://spec-imagehosting.s3.amazonaws.com/CDSwhitemasthead.png"></img></a>
             </Logo>
             <HamburgerMenu
                 isOpen={open}

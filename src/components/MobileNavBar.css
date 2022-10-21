@@ -54,7 +54,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: #0046A6;
+  background: rgba(0, 70, 166, 1);
   font-family:'IBM Plex Serif';
   font-size: 1.15em;
   height: 100% !important;
@@ -63,7 +63,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: white;
+  fill: #0046A6;
 }
 
 /* Wrapper for item list */
