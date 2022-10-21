@@ -6,34 +6,34 @@ export const sections = [
     },
     {
         title: "Sports",
-        url: "#sports",
+        url: "sports",
     },
     {
         title: "Opinion",
-        url: "#opinion",
+        url: "opinion",
     },
     {
         title: "A&E",
-        url: "#a&e",
+        url: "a&e",
     },
     {
         title: "City News",
-        url: "#city-news",
+        url: "city-news",
     },
     {
         title: "University News",
-        url: "#university-news",
+        url: "university-news",
     },
     {
         title: "Spectrum",
-        url: "#spectrum",
+        url: "spectrum",
     },
     {
         title: "Audio",
-        url: "#audio",
+        url: "audio",
     },
     {
-        title:"Acknowledgements",
-        url:"#acknowledgements"
+        title:"Credits",
+        url:"Credits"
     }
 ];

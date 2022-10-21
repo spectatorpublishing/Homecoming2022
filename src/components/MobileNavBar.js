@@ -1,23 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
-import HamburgerMenu from 'react-burger-menu';
-// import { fallDown as Menu } from 'react-burger-menu';
-import { Link } from 'react-router-dom';
+import HamburgerMenu from 'react-hamburger-menu';
+import { fallDown as Menu } from 'react-burger-menu';
+import { Link, redirect } from 'react-router-dom';
 import { sections } from '../data/sections';
-import theme from '../theme';
-
-const MenuItem = styled.div`
-    padding: 0.5rem 1rem;
-    a {
-        text-decoration: none;
-        color: ${theme.colors.black};
-    }
-`;
+import "./MobileNavBar.css"
 
 const NavWrap = styled.div`
     text-align: center;
+    margin: auto;
     padding-top: 0rem;
-    height:10vh;
+    height:12vh;
     justify-content: space-between;
     align-items:center;
     display:flex;
@@ -26,9 +19,9 @@ const NavWrap = styled.div`
     left:0;
     flex-wrap: wrap;
     z-index:100;
-    background-color: gray;
+    background-color:#0046A6;
     a {
-        padding: 0.5rem;
+        padding: 0.5rem 0rem;
     }
     @media (min-width: 768px) {
        display:none;
@@ -36,34 +29,25 @@ const NavWrap = styled.div`
 `;
 
 const Tab = styled.div`
-    padding: 0.5rem 1rem;
+    background-color:${props => props.current ? "#D2E1EE" : "inherit"};
+    color:${props => props.current ? "#1F3B83" : "white"};
+    padding: 0.75rem;
 `;
 const Logo = styled.div`
     z-index:100;
     position:relative;
+    bottom:0.75rem;
     left:5%;
 `;
-
-const HamburgerWrapper = styled.div`
-    display: flex;
-    margin-left: auto;
-    margin-right: 2rem;
-    z-index: 100;
-`;
-
-const Menu = styled.div`
-    display: ${props => props.isOpen ? "flex" : "none"};
-    flex-direction: column;
-    position: absolute;
-    top: 5rem;
-    right: 0;
-`;
-
-const MobileNavBar = ({ current }) => {
+const MobileNavBar = () => {
     const [open, setOpen] = React.useState(false);
+    const [current, setCurrent] = useState("/");
 
     function handleClick() {
-        console.log(open)
+        setOpen(!open)
+    }
+    function redirect(section){
+        setCurrent(section)
         setOpen(!open)
     }
 
@@ -72,34 +56,31 @@ const MobileNavBar = ({ current }) => {
             <Logo>
                 <a href="https://www.columbiaspectator.com/" style={{
                 }}><img style={{
-                    height: "40px",
-                    width: "40px",
-                }} src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LC75RL476NFG3P677LOBAW2MXE.png"></img></a>
+                    position: "absolute",
+                    height: "auto",
+                    width: "15rem",
+                }} src="https://spec-imagehosting.s3.amazonaws.com/CDSwhitemasthead.png"></img></a>
             </Logo>
-            <HamburgerWrapper>
-                <HamburgerMenu
-                    isOpen={open}
-                    menuClicked={() => handleClick()}
-                    width={30}
-                    height={20}
-                    strokeWidth={5}
-                    rotate={0}
-                    color='white'
-                    borderRadius={0}
-                    animationDuration={0.5}
-                    zIndex={100}
-                    className="over"
-                />
-            </HamburgerWrapper>
-
-            <Menu isOpen={open}>
-                {sections.map(section => (
-                    <MenuItem>
-                        <Link to={section.url}>{section.title}</Link>
-                    </MenuItem>
+            <HamburgerMenu
+                isOpen={open}
+                menuClicked={() => handleClick()}
+                width={30}
+                height={20}
+                strokeWidth={2.5}
+                rotate={0}
+                color='white'
+                borderRadius={0}
+                animationDuration={0.5}
+                zIndex={0}
+                className="over"
+            />
+            <Menu isOpen={open} width={'100vw'}>
+                {sections.map((section, index) => (
+                    <Link>
+                        <Tab current = {current == section.url} onClick = {()=>redirect(section.url)} key={index}>{section.title}</Tab>
+                    </Link>
                 ))}
             </Menu>
-
         </NavWrap>
     );
 };

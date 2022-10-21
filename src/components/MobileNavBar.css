@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: 'IBM Plex Serif';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-image: none;
+  }
+
+  .A {
+    height: 110vw;
+  }
+}
+
+
+#slidebar {
+  display: none;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  display: none;
+}
+
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+  display: none;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: black;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100% !important;
+  left: 0;
+  z-index: 1 !important;
+  top: 9vh !important;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #0046A6;
+  font-family:'IBM Plex Serif';
+  font-size: 1.15em;
+  height: 100% !important;
+  top: 9vh;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: white;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  height:auto !important;
+  margin-top:1.5rem;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  color: white;
+  text-decoration:none;
+  font-weight:700;
+  text-transform: uppercase;
+  font-style:normal;
+}
+/* Styling of overlay */
+.bm-overlay {
+  background: none !important;
+}
+
+.over {
+  z-index: 100;
+  position: relative;
+  left: 35%;
+}
