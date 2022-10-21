@@ -61,12 +61,6 @@ export const spectrum_articles =[
 export const city_news_articles = 
 [
   {
-    "article_link": "article_link",
-    "article_title": "article_title",
-    "article_authors": "article_authors",
-    "image_url": "image_url"
-  },
-  {
     "article_link": "https://www.columbiaspectator.com/news/2022/10/11/pooling-pta-funds-may-help-curb-inequityor-kill-fundraising/",
     "article_title": "Pooling PTA funds may help curb inequity—or kill fundraising",
     "article_authors": "Alice Tecotzky",
