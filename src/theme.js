@@ -1,7 +1,10 @@
 const theme = {
     colors: {
       white: '#FFFFFF',
-      black: '#000000'
+      black: '#000000',
+      lightBlue: '#D2E1EE',
+      blueText: '#0046A6',
+      darkBlue: '#75AADB'
     },
     sizes: {
       mobile: "767px",
@@ -10,6 +13,9 @@ const theme = {
       aboveLargeTablet: "1024px",
       desktop: "1200px",
       largeDesktop: "1440px"
+    },
+    lion: {
+      roarie: "&#129409",
     }
   };
   
