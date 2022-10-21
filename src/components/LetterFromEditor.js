@@ -42,8 +42,7 @@ const LetterHeader = styled.h2`
     line-height:1rem;
     width:100%;
     @media only screen and (max-width: 768px){
-        font-size: 1rem;
-        margin-left: 1.9rem;
+        font-size: 1.5rem;
     }
 `;
 
@@ -59,9 +58,8 @@ const Body = styled.h5`
     width: 100%;
     overflow-wrap: break-word;
     @media only screen and (max-width: 768px){
-        font-size: 0.75rem;
-        padding-left: 1.8rem; 
-        margin-right: 2.5rem;
+        font-size: 1.2rem;
+        text-align: center;
     }
 `;
 
