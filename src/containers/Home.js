@@ -5,6 +5,7 @@ import Carousel from '../components/Carousel';
 import NavBar from '../components/NavBar';
 import styled from 'styled-components';
 import MobileNavBar from '../components/MobileNavBar';
+import MobileCarousel from '../components/MobileCarousel';
 import {uni_news_articles, opinion_articles, spectrum_articles,audio_articles,a_and_e_articles,sports_articles,city_news_articles} from '../data/articles';
 import "./Home.css"
 const HomeContainer = styled.div`
@@ -78,7 +79,14 @@ const Home = () => {
       <Carousel section = {city_news_articles} section_title = "City News"/>
       <Carousel section = {spectrum_articles} section_title = "Spectrum"/>
       <Carousel section = {audio_articles} section_title = "Audio"/>
-
+      
+      <MobileCarousel section = {sports_articles} section_title = "Sports"/>
+      <MobileCarousel section = {a_and_e_articles} section_title = "Arts and Entertainment"/>
+      <MobileCarousel section = {opinion_articles} section_title = "Opinion"/>
+      <MobileCarousel section = {uni_news_articles} section_title = "University News"/>
+      <MobileCarousel section = {city_news_articles} section_title = "City News"/>
+      <MobileCarousel section = {spectrum_articles} section_title = "Spectrum"/>
+      <MobileCarousel section = {audio_articles} section_title = "Audio"/>
       <Credits/>
 
     </HomeContainer>

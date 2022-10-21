@@ -5,9 +5,9 @@ import theme from '../theme';
 import { articles } from '../data/articles'
 import './carousel.css' ;
 const Container = styled.div`
-@media only screen and (max-width: 768px){
-    display:none;
-}
+    @media (min-width: 768px) {
+       display:none;
+    }
 `;
 const CarouselChild = (props) => {
     const {children, show} = props;
@@ -15,7 +15,7 @@ const CarouselChild = (props) => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [length, setLength] = useState(children.length)
 
-
+    
     useEffect(() => {
         setLength(children.length)
     }, [children])
@@ -79,17 +79,16 @@ const Carousel = ({section, section_title}) => {
     return (
         <Container>
         <div class = "carousel-container">
-        <p class = "section_title">{section_title}</p>
-            <CarouselChild show = {3}>
+            <p class = "section_title">{section_title}</p>
+            <CarouselChild show = {2}>
                 {article_array}
-        
+
             
 
             </CarouselChild>
         </div>
         </Container>
     );
-       
-};
+    };
 
 export default Carousel;
