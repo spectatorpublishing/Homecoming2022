@@ -284,6 +284,9 @@ export const credits = {
         {
           "staff_name": "Kathy Fang",
           "title": "Staff Photographer"
+        },{
+          "staff_name": "Caitlin Buckley",
+          "title": "Columbia Daily Spectator"
         }
       ],
       "Audio": [

@@ -44,6 +44,7 @@ const Body = styled.h5`
     align-items: center;
     width: 100%;
     overflow-wrap: break-word;
+    line-height: 2rem;
     @media only screen and (max-width: 768px){
         font-size: 1.1rem;
         padding:0rem 2rem;
@@ -59,9 +60,18 @@ const LetterFromEditor = ({ }) => {
                 </LetterHeader>
                 <LetterBox>
                 <Body>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                Dear readers, <br></br><br></br>
+ 
+                    This year’s Homecoming is a time for celebration, as students, parents, alumni, and other Columbia affiliates come together in a moment of school spirit. Our second Homecoming since the start of the pandemic comes after a year of extensive change at the University, from readapting to in-person learning to pending leadership changes at Columbia’s highest levels. Throughout this tumult, the Lion spirit among the student body has grown in many ways, as we return to a campus life reminiscent of pre-pandemic days. 
+                    
+                    Amid this change, we pause for celebration. Homecoming weekend serves as a time to come together and to help find your community whether you are a first-year, senior, or even an alum. Whether you are the biggest Columbia Lions fan out there, or have never stepped foot in Wien Stadium, we hope this edition illuminates the depth of Homecoming, beyond just watching the Light Blue play against Dartmouth.
+                    
+                    We invite you to take a look at the stories that have shaped Homecoming this year, prepare for Saturday afternoon’s game, and reflect on the state of education and community at Columbia.
+                    <br></br><br></br>
+                    Go Lions! <br></br><br></br>
+                    Clara Ence Morse, Editor in Chief<br></br>
+                    Dia Gill, Managing Editor
+ 
                 </Body>
                 </LetterBox>
         </Wrapper>
