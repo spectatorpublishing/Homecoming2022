@@ -54,16 +54,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: rgba(0, 70, 166, 1);
+  background: #2b5b9b;
   font-family:'IBM Plex Serif';
-  font-size: 1.15em;
+  font-size: 1.2em;
   height: 100% !important;
   top: 9vh;
 }
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: #0046A6;
+  fill: #2b5b9b;
 }
 
 /* Wrapper for item list */
@@ -79,7 +79,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: white;
   text-decoration:none;
   font-weight:700;
-  text-transform: uppercase;
   font-style:normal;
 }
 /* Styling of overlay */

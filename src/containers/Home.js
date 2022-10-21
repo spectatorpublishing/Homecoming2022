@@ -8,6 +8,7 @@ import MobileNavBar from '../components/MobileNavBar';
 import MobileCarousel from '../components/MobileCarousel';
 import {uni_news_articles, opinion_articles, spectrum_articles,audio_articles,a_and_e_articles,sports_articles,city_news_articles} from '../data/articles';
 import "./Home.css"
+
 const HomeContainer = styled.div`
     @media only screen and (max-width: 768px){
     }
@@ -30,8 +31,7 @@ const HeaderImage = styled.div`
     display: flex;
     justify-content: flex-end;
     @media only screen and (max-width: 768px){
-      height:80vh;
-      background-image: url("https://cloudfront-us-east-1.images.arcpublishing.com/spectator/XSROV7CJTFCW7LHD4WP5S6WFI4.jpg");
+      display:none;
     }
 `;
 
@@ -63,34 +63,63 @@ const Logo = styled.img`
   width:20rem;
 `;
 
+const MobileImg = styled.img`
+  width:100%;
+  height:auto;
+  @media only screen and (min-width: 769px){
+      display:none;
+    }
+`;
+
 const Empty = styled.div``;
 const Home = () => {
   return (
     <HomeContainer>
-      <MobileNavBar/>
-      <NavBar/>
-      <HeaderImage>
-        <Headline>Homecoming 2022</Headline>
-      </HeaderImage>
-      <Letter/>
+      <div id="home"/>
+        <NavBar/>
+        <MobileNavBar/>
+        <HeaderImage>
+          <Headline>Homecoming 2022</Headline>
+        </HeaderImage>
+        <MobileImg src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/XSROV7CJTFCW7LHD4WP5S6WFI4.jpg"/>
+        <Letter/>
+      <div/>
 
-      <Carousel section = {sports_articles} section_title = "Sports"/>
-      <Carousel section = {a_and_e_articles} section_title = "Arts and Entertainment"/>
-      <Carousel section = {opinion_articles} section_title = "Opinion"/>
-      <Carousel section = {uni_news_articles} section_title = "University News"/>
-      <Carousel section = {city_news_articles} section_title = "City News"/>
-      <Carousel section = {spectrum_articles} section_title = "Spectrum"/>
-      <Carousel section = {audio_articles} section_title = "Audio"/>
+      <div id="sports">
+        <Carousel section = {sports_articles} section_title = "Sports"/>
+        <MobileCarousel section = {sports_articles} section_title = "Sports"/>
+      </div>
+
+      <div id="a&e">
+        <Carousel section = {a_and_e_articles} section_title = "Arts and Entertainment" section_url="a&e"/>
+        <MobileCarousel section = {a_and_e_articles} section_title = "Arts and Entertainment" section_url="a&e"/>
+      </div>
+
+      <div id="opinion">
+        <Carousel section = {opinion_articles} section_title = "Opinion" section_url="opinion"/>
+        <MobileCarousel section = {opinion_articles} section_title = "Opinion" section_url="opinion"/>
+      </div>
+
+      <div id="university-news">
+        <Carousel section = {uni_news_articles} section_title = "University News" section_url="university-news"/>
+        <MobileCarousel section = {uni_news_articles} section_title = "University News" section_url="university-news"/>
+      </div>
+
+      <div id="city-news">
+        <Carousel section = {city_news_articles} section_title = "City News" section_url="city-news"/>
+        <MobileCarousel section = {city_news_articles} section_title = "City News" section_url="city-news"/>
+      </div>
+
+      <div id="spectrum">
+        <Carousel section = {spectrum_articles} section_title = "Spectrum" section_url="spectrum"/>
+        <MobileCarousel section = {spectrum_articles} section_title = "Spectrum" section_url="spectrum"/>
+      </div>
       
-      <MobileCarousel section = {sports_articles} section_title = "Sports"/>
-      <MobileCarousel section = {a_and_e_articles} section_title = "Arts and Entertainment"/>
-      <MobileCarousel section = {opinion_articles} section_title = "Opinion"/>
-      <MobileCarousel section = {uni_news_articles} section_title = "University News"/>
-      <MobileCarousel section = {city_news_articles} section_title = "City News"/>
-      <MobileCarousel section = {spectrum_articles} section_title = "Spectrum"/>
-      <MobileCarousel section = {audio_articles} section_title = "Audio"/>
-      <Credits/>
-
+      <div id="audio">
+        <Carousel section = {audio_articles} section_title = "Audio" section_url="audio"/>
+        <MobileCarousel section = {audio_articles} section_title = "Audio" section_url="audio"/>
+      </div>
+    <Credits/>
     </HomeContainer>
   );
 }

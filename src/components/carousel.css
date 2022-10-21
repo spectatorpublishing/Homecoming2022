@@ -50,11 +50,11 @@
     user-select: none; 
     transform: scaleY(250%);
     color: #0046A6;
-    font-size: 30px;
+    font-size: 2.5rem;
     background:none;
     border:none;
+    padding:0.5rem;
     margin:0;
-    padding:10px;
     cursor: pointer;
 }
 
@@ -123,17 +123,13 @@
 
 @media only screen and (min-width: 769px) {
     .section_title {
-        font-size: 64px;
-        padding-left: 55px;
+        font-size: 3rem;
+        padding-left: 3rem;
 
     }
     .centered{
-        font-size: 30px;
-
-
-        width: 85%;
-
-      
+        font-size: 1.8rem;
+        width: 75%;
       }    
     .carousel-content.show-3 > * {
         width: calc(100% / 3);
@@ -144,27 +140,33 @@
         /* width:354px;
         height: 258px; */
         /* width: 600px; */
-        width: 90%;
-        height: 400px;
+        width: 80%;
+        height: 20rem;
     
     }   
     .container:hover .caro_img{
 
         /* width:354px; */
-        width: 90%;
-        height: 400px;
+        width: 80%;
+        height: 20rem;
 
     }
     .carousel-container {
         /* width: 1439px; */
         width: 100%;
+        margin-bottom:3rem;
         align-self: center;    
     }
     .left-arrow {
         left: 24px;
+        padding-right:0px;
+        padding-left:20px;
+        
     }
     
     .right-arrow {
         right: 24px;
+        padding-left:0px;
+        padding-right:30px;
     }
 }

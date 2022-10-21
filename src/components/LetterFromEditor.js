@@ -7,19 +7,6 @@ const Wrapper = styled.div`
     }
 `;
 
-// const Container = styled.div`
-//     background-color: #ffffff;
-//     height: 50rem;
-//     color: #0046A6;
-//     display: flex;
-//     align-items: flex-start;
-//     justify-content: center;
-//     flex-direction: column;
-//     @media only screen and (max-width: 768px){
-//         height: 63rem;
-//     }
-// `;
-
 //div for letter from editor
 const LetterBox = styled.div`
     height: auto;
@@ -35,13 +22,14 @@ const LetterBox = styled.div`
 const LetterHeader = styled.h2`
     font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
     font-weight: normal;
-    font-size: 3rem;
-    padding-left:5rem; 
+    font-size: 2.5rem;
+    padding-left:3rem; 
     margin-bottom: -0.05rem;
     padding-top: 2rem;
-    line-height:1rem;
     @media only screen and (max-width: 768px){
-        font-size: 1.5rem;
+        font-size: 2rem;
+        text-align: left;
+        padding:0rem 2rem;
     }
 `;
 
@@ -49,16 +37,17 @@ const LetterHeader = styled.h2`
 const Body = styled.h5`
     font-family: 'Roboto Light', sans-serif;
     font-weight: normal;
-    padding-left:5rem; 
+    padding-left:3rem; 
     padding-right: 5rem;
     display: flex;
-    font-size:1.5rem;
+    font-size:1.4rem;
     align-items: center;
     width: 100%;
     overflow-wrap: break-word;
     @media only screen and (max-width: 768px){
-        font-size: 1.2rem;
-        text-align: center;
+        font-size: 1.1rem;
+        padding:0rem 2rem;
+        text-align: left;
     }
 `;
 

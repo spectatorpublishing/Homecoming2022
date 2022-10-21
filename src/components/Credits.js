@@ -6,6 +6,7 @@ const Container = styled.div`
     width: 100%;
     background-color: #D2E1EE;
     color: #0046A6;
+    padding-bottom:3rem;
 `;
 
 const HeaderDiv = styled.div`
@@ -32,6 +33,7 @@ const Header = styled.h1`
     @media only screen and (max-width: 600px){
         font-weight: 400;
         font-size: 1.3rem;
+        padding-top:5rem;
     }
 `;
 
@@ -106,11 +108,14 @@ const Name = styled.div`
     @media only screen and (max-width: 1024px){
         font-size: 0.75rem;
     }
+    @media only screen and (max-width: 768px){
+        font-size:1rem;
+    }
 `;
 
 const Credits = () => {
     return (
-        <Container>
+        <Container id="credits">
             <HeaderDiv><Header>THE COLUMBIA DAILY SPECTATOR STAFF WHO MADE THIS ISSUE POSSIBLE</Header></HeaderDiv>
             <SectAndNames>
                 {Object.entries(credits).map(([section, key]) => {

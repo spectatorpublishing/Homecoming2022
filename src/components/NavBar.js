@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import { sections } from '../data/sections';
-import {useRef} from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 
 const Nav = styled.div`
@@ -64,7 +64,7 @@ const Lion = styled.span`
     right:2rem;
 `
 const NavBar = () => {
-    const [current, setCurrent] = useState("/");
+    const [current, setCurrent] = useState("/#");
     return (
         <Nav>
         <Logo>
@@ -76,9 +76,11 @@ const NavBar = () => {
             </Logo>
         <VertNav>
             {sections.map((section, index) => (
+                <HashLink smooth to={section.url} style={{textDecoration:'none'}}>
                 <Tab current = {current == section.url} onClick = {()=>setCurrent(section.url)} key={index}>
                     <NavText>{section.title} {current==section.url ? <Lion>&#129409;</Lion> : null}</NavText>
                 </Tab>
+                </HashLink>
             ))}
         </VertNav >
         </Nav>

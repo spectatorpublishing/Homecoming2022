@@ -2,15 +2,15 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import HamburgerMenu from 'react-hamburger-menu';
 import { fallDown as Menu } from 'react-burger-menu';
-import { Link, redirect } from 'react-router-dom';
 import { sections } from '../data/sections';
+import { HashLink } from 'react-router-hash-link';
 import "./MobileNavBar.css"
 
 const NavWrap = styled.div`
     text-align: center;
     margin: auto;
     padding-top: 0rem;
-    height:10vh;
+    height:9vh;
     justify-content: space-between;
     align-items:center;
     display:flex;
@@ -19,17 +19,17 @@ const NavWrap = styled.div`
     left:0;
     flex-wrap: wrap;
     z-index:100;
-    background-color:rgba(0, 70, 166, 1);
+    background-color:#2b5b9b;
     a {
         padding: 0.5rem 0rem;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
        display:none;
     }
 `;
 
 const Tab = styled.div`
-    background-color:${props => props.current ? "rgba(210, 225, 238, 1)" : "#0046A6"};
+    background-color:${props => props.current ? "rgba(210, 225, 238, 1)" : "inherit"};
     color:${props => props.current ? "rgba(0, 70, 166, 1)" : "white"};
     padding: 0.55rem;
 `;
@@ -37,7 +37,6 @@ const Logo = styled.div`
     z-index:100;
     position:relative;
     left:5%;
-    bottom:0.6rem;
 `;
 const MobileNavBar = () => {
     const [open, setOpen] = React.useState(false);
@@ -45,21 +44,21 @@ const MobileNavBar = () => {
 
     function handleClick() {
         setOpen(!open)
+    
     }
-    function redirect(section){
+    function set(section) {
         setCurrent(section)
         setOpen(!open)
     }
 
     return (
-        <NavWrap>
+        <NavWrap open={open}>
             <Logo>
                 <a href="https://www.columbiaspectator.com/" style={{
                 }}><img style={{
-                    position: "absolute",
-                    height: "auto",
-                    width: "15rem",
-                }} src="https://spec-imagehosting.s3.amazonaws.com/CDSwhitemasthead.png"></img></a>
+                    height: "40px",
+                    width: "40px",
+                }} src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LC75RL476NFG3P677LOBAW2MXE.png"></img></a>
             </Logo>
             <HamburgerMenu
                 isOpen={open}
@@ -74,11 +73,12 @@ const MobileNavBar = () => {
                 zIndex={0}
                 className="over"
             />
+            
             <Menu isOpen={open} width={'100vw'}>
                 {sections.map((section, index) => (
-                    <Link>
-                        <Tab current = {current == section.url} onClick = {()=>redirect(section.url)} key={index}>{section.title}</Tab>
-                    </Link>
+                    <HashLink smooth to={section.url} onClick = {()=>set(section.url)} style={{textDecoration:'none'}}>
+                        <Tab current = {current == section.url} key={index}>{section.title}</Tab>
+                    </HashLink>
                 ))}
             </Menu>
         </NavWrap>

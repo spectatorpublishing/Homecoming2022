@@ -71,20 +71,17 @@ const CarouselItem = ({im_url, title, link}) => {
         </a>
     )
 }
-const Carousel = ({section, section_title}) => {
+const Carousel = ({section, section_title, section_url}) => {
     var article_array = []
     for (var i = 0; i < section.length; i++) {
         article_array.push((<CarouselItem im_url = {section[i].image_url} title = {section[i].article_title} link = {section[i].article_link}/>   ));
     }
     return (
         <Container>
-        <div class = "carousel-container">
-        <p class = "section_title">{section_title}</p>
+        <div class = "carousel-container" id={section_url}>
+        <p class = "section_title" id= {section.url}>{section_title}</p>
             <CarouselChild show = {3}>
                 {article_array}
-        
-            
-
             </CarouselChild>
         </div>
         </Container>

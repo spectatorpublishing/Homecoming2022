@@ -5,7 +5,7 @@ import theme from '../theme';
 import { articles } from '../data/articles'
 import './carousel.css' ;
 const Container = styled.div`
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
        display:none;
     }
 `;
@@ -71,20 +71,20 @@ const CarouselItem = ({im_url, title, link}) => {
         </a>
     )
 }
-const Carousel = ({section, section_title}) => {
+const Carousel = ({section, section_title, section_url}) => {
     var article_array = []
     for (var i = 0; i < section.length; i++) {
         article_array.push((<CarouselItem im_url = {section[i].image_url} title = {section[i].article_title} link = {section[i].article_link}/>   ));
     }
     return (
-        <Container>
+        <Container id={section_url}>
+        <br/>
+        <br/>
+        <br/>
         <div class = "carousel-container">
             <p class = "section_title">{section_title}</p>
             <CarouselChild show = {2}>
                 {article_array}
-
-            
-
             </CarouselChild>
         </div>
         </Container>

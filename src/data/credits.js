@@ -201,43 +201,43 @@ export const credits = {
     "Arts and Entertainment": [
         {
           "staff_name": "Bella Druckman",
-          "title": "Arts & Entertainment Editor"
+          "title": "A&E Editor"
         },
         {
           "staff_name": "Fernanda Aguero",
-          "title": "Deputy Arts & Entertainment Editor"
+          "title": "Deputy A&E Editor"
         },
         {
           "staff_name": "Isabella Farfan",
-          "title": "Deputy Arts & Entertainment Editor"
+          "title": "Deputy A&E Editor"
         },
         {
           "staff_name": "Noah Bullwinkle",
-          "title": "Deputy Arts & Entertainment Editor"
+          "title": "Deputy A&E Editor"
         },
         {
           "staff_name": "Katie Levine",
-          "title": "Deputy Arts & Entertainment Editor"
+          "title": "Deputy A&E Editor"
         },
         {
           "staff_name": "Irene Madrigal",
-          "title": "Deputy Arts & Entertainment Editor"
+          "title": "Deputy A&E Editor"
         },
         {
           "staff_name": "Vincent Hou",
-          "title": "Deputy Arts & Entertainment Editor"
+          "title": "Deputy A&E Editor"
         },
         {
           "staff_name": "Beatrice Moyers",
-          "title": "Arts & Entertainment Staff Writer"
+          "title": "A&E Staff Writer"
         },
         {
           "staff_name": "Sinziana Stanciu",
-          "title": "Arts & Entertainment Staff Writer"
+          "title": "A&E Staff Writer"
         },
         {
           "staff_name": "Hana Gallagher",
-          "title": "Arts & Entertainment Staff Writer"
+          "title": "A&E Staff Writer"
         }
       ],
     "Photo": [
