@@ -10,7 +10,7 @@ const NavWrap = styled.div`
     text-align: center;
     margin: auto;
     padding-top: 0rem;
-    height:12vh;
+    height:10vh;
     justify-content: space-between;
     align-items:center;
     display:flex;
@@ -36,7 +36,6 @@ const Tab = styled.div`
 const Logo = styled.div`
     z-index:100;
     position:relative;
-    bottom:0.75rem;
     left:5%;
 `;
 const MobileNavBar = () => {
@@ -54,12 +53,12 @@ const MobileNavBar = () => {
     return (
         <NavWrap>
             <Logo>
-                <a href="https://www.columbiaspectator.com/" style={{
+                {/* <a href="https://www.columbiaspectator.com/" style={{
                 }}><img style={{
                     position: "absolute",
                     height: "auto",
                     width: "15rem",
-                }} src="https://spec-imagehosting.s3.amazonaws.com/CDSwhitemasthead.png"></img></a>
+                }} src="https://spec-imagehosting.s3.amazonaws.com/CDSwhitemasthead.png"></img></a> */}
             </Logo>
             <HamburgerMenu
                 isOpen={open}

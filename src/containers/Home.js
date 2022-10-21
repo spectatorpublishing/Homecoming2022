@@ -31,19 +31,19 @@ const HeaderImage = styled.div`
     @media only screen and (max-width: 768px){
       margin-top:1vw;
       height:120vh;
-      background-image: url(https://cloudfront-us-east-1.images.arcpublishing.com/spectator/XSROV7CJTFCW7LHD4WP5S6WFI4.jpg);
+      background-image: url("https://cloudfront-us-east-1.images.arcpublishing.com/spectator/XSROV7CJTFCW7LHD4WP5S6WFI4.jpg");
     }
 `;
 
 //"Homecoming 2022"
 const Headline = styled.div`
     position: absolute;
-    width:57%;
+    width:70%;
     height:12%;
     color: white;
     font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
     font-weight: bold;
-    font-size: 5rem;
+    font-size:4rem;
     padding-left:0.5rem;
     left: 2.5%;
     top: 80%;
@@ -53,6 +53,9 @@ const Headline = styled.div`
         font-size: 1.2rem;
         top: 93%;
         left: 1.8rem;
+    }
+    @media only screen and (max-width: 1024px){
+        font-size:3.8rem;
     }
 `;
 const Logo = styled.img`
