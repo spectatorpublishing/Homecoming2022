@@ -17,7 +17,7 @@ const Header = styled.h1`
     text-align: center;
     width: 70%;
     font-size: 2.5rem;
-    font-family: 'IBM Plex Serif', serif;
+    font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
     padding-top:2rem;
 
     @media only screen and (max-width: 1216px){
@@ -69,7 +69,7 @@ const Section = styled.div`
     margin-bottom: 2rem;
     padding:0;
     margin:0;
-    font-family: 'IBM Plex Serif', serif;
+    font-family:  'IBM Plex Serif', 'Georgia', Times, serif;
 
     @media only screen and (max-width: 1216px){
         font-size: 1.6rem;

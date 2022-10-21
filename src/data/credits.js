@@ -18,15 +18,11 @@ export const credits = {
           "title": "Engineering Manager"
         },
         {
-          "staff_name": "Daniel Jeong",
+          "staff_name": "Ravneek Kaur",
           "title": "Associate Developer"
         },
         {
           "staff_name": "Darien Moment",
-          "title": "Associate Developer"
-        },
-        {
-          "staff_name": "Kimberly Tsao",
           "title": "Associate Developer"
         },
         {
