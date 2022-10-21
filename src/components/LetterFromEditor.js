@@ -40,7 +40,6 @@ const LetterHeader = styled.h2`
     margin-bottom: -0.05rem;
     padding-top: 2rem;
     line-height:1rem;
-    width:100%;
     @media only screen and (max-width: 768px){
         font-size: 1.5rem;
     }
