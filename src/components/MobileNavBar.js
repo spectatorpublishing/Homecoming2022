@@ -40,7 +40,7 @@ const Logo = styled.div`
 `;
 const MobileNavBar = () => {
     const [open, setOpen] = React.useState(false);
-    const [current, setCurrent] = useState("/");
+    const [current, setCurrent] = useState("/#");
 
     function handleClick() {
         setOpen(!open)
