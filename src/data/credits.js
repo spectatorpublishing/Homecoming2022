@@ -18,6 +18,10 @@ export const credits = {
           "title": "Engineering Manager"
         },
         {
+          "staff_name": "Chase Yano",
+          "title": "Senior Developer"
+        },
+        {
           "staff_name": "Daniel Jeong",
           "title": "Associate Developer"
         },
@@ -31,10 +35,6 @@ export const credits = {
         },
         {
           "staff_name": "Kimberly Tsao",
-          "title": "Associate Developer"
-        },
-        {
-          "staff_name": "Chase Yano",
           "title": "Associate Developer"
         }
       ],
