@@ -40,8 +40,13 @@ const Body = styled.h5`
     padding-left:3rem; 
     padding-right: 5rem;
     display: flex;
+    flex-direction: column;
     font-size:1.4rem;
-    align-items: center;
+
+    p {
+        margin: 0.75rem 0rem;
+    }
+    
     width: 100%;
     overflow-wrap: break-word;
     line-height: 2rem;
@@ -60,17 +65,14 @@ const LetterFromEditor = ({ }) => {
                 </LetterHeader>
                 <LetterBox>
                 <Body>
-                Dear readers, <br></br><br></br>
- 
-                    This year’s Homecoming is a time for celebration, as students, parents, alumni, and other Columbia affiliates come together in a moment of school spirit. Our second Homecoming since the start of the pandemic comes after a year of extensive change at the University, from readapting to in-person learning to pending leadership changes at Columbia’s highest levels. Throughout this tumult, the Lion spirit among the student body has grown in many ways, as we return to a campus life reminiscent of pre-pandemic days. 
-                    
-                    Amid this change, we pause for celebration. Homecoming weekend serves as a time to come together and to help find your community whether you are a first-year, senior, or even an alum. Whether you are the biggest Columbia Lions fan out there, or have never stepped foot in Wien Stadium, we hope this edition illuminates the depth of Homecoming, beyond just watching the Light Blue play against Dartmouth.
-                    
-                    We invite you to take a look at the stories that have shaped Homecoming this year, prepare for Saturday afternoon’s game, and reflect on the state of education and community at Columbia.
-                    <br></br><br></br>
-                    Go Lions! <br></br><br></br>
-                    Clara Ence Morse, Editor in Chief<br></br>
-                    Dia Gill, Managing Editor
+                <p>Dear readers,</p>
+                    <p>This year's Homecoming is a time for celebration, as students, parents, alumni, and other Columbia affiliates come together in a moment of school spirit. Our second Homecoming since the start of the pandemic comes after a year of extensive change at the University, from readapting to in-person learning to pending leadership changes at Columbia's highest levels. Throughout this tumult, the Lion spirit among the student body has grown in many ways, as we return to a campus life reminiscent of pre-pandemic days.</p> 
+                    <p>Amid this change, we pause for celebration. Homecoming weekend serves as a time to come together and to help find your community whether you are a first-year, senior, or even an alum. Whether you are the biggest Columbia Lions fan out there, or have never stepped foot in Wien Stadium, we hope this edition illuminates the depth of Homecoming, beyond just watching the Light Blue play against Dartmouth.</p>
+                    <p>We invite you to take a look at the stories that have shaped Homecoming this year, prepare for Saturday afternoon's game, and reflect on the state of education and community at Columbia.</p>
+                    <p>Go Lions!</p>
+                    <br></br>
+                    <p><b>Clara Ence Morse</b>, Editor in Chief</p>
+                    <p><b>Dia Gill</b>, Managing Editor</p>
  
                 </Body>
                 </LetterBox>
