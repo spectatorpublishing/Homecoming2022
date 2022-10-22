@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-scroll';
 import { sections } from '../data/sections';
 import { HashLink } from 'react-router-hash-link';
 
