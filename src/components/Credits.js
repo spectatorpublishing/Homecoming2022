@@ -28,13 +28,14 @@ const Header = styled.h1`
     }
 
     @media only screen and (max-width: 768px){
-        width: 80%;
-        font-size: 1.8rem;
+        width: 60%;
+        font-size: 1.4rem;
+        text-align: left;
     }
 
     @media only screen and (max-width: 600px){
         font-weight: 400;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         padding-top:5rem;
     }
 `;
@@ -62,6 +63,7 @@ const SectAndNames = styled.div`
         align-content: none;
         height: fit-content;
         margin-top:2rem;
+        text-align: center;
     }  
 `;
 
@@ -88,13 +90,15 @@ const Section = styled.div`
 
     @media only screen and (max-width: 768px){
         font-size: 1.25rem;
-        text-align: center;
-        width: 100%;
+        width: 60%;
+        margin-bottom: 0rem;
+        text-align: left;
+        justify-content: center;
+        margin: 0 auto;
     }
     @media only screen and (max-width: 600px){
         font-size: 1.0rem;
-        text-align: center;
-        width: 100%;
+        width: 60%;
     }
 `;
 
@@ -115,8 +119,19 @@ const Name = styled.div`
     }
     @media only screen and (max-width: 768px){
         font-size: 1.0rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        height: fit-content
     }
 `;
+
+const SectionTitle = styled.div`
+    margin-bottom: 2rem;
+    @media only screen and (max-width: 768px){
+        margin-bottom: 0rem;
+    }
+`;
+
 
 const Credits = () => {
     return (
@@ -125,9 +140,10 @@ const Credits = () => {
             <SectAndNames>
                 {Object.entries(credits).map(([section, key]) => {
                     return(
-                        <Section> {section} 
-                        <br/>
-                        <br/>
+                        <Section>
+                        <SectionTitle>
+                            {section} 
+                        </SectionTitle>  
                         {key.map((person, index) => {
                             return(
                                 <Name key={index}>{person.staff_name}, {person.title}</Name>
